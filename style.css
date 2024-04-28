@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a2bcf0; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    position: relative; /* Set body as the reference for absolutely positioned elements */
+}
+
+.countdown-container {
+    text-align: center;
+    margin-top: 100px;
+    position: relative; /* Set position relative to align with the body */
+    z-index: 1; /* Ensure the content appears above the sunflowers */
+}
+
+h1 {
+    font-size: 36px;
+    color: #1565c0; /* Dark blue text color */
+    margin-bottom: 20px;
+}
+
+#countdown {
+    font-size: 48px;
+    color: #1a237e; /* Dark blue countdown color */
+    background-color: #fff; /* White background for countdown */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+h1::before,
+h1::after {
+    content: ''; /* Empty content to insert the sunflower */
+    position: absolute;
+    left: -70px; /* Adjust the distance from the left side */
+    top: calc(50% + 10px); /* Align with the middle of the h1 and add 10px */
+    transform: translateY(-50%);
+    width: 50px; /* Adjust the size of the sunflower */
+    height: auto;
+    animation: spin 8s linear infinite; /* Make sunflowers spin */
+}
+
+h1::after {
+    left: auto;
+    right: -70px; /* Adjust the distance from the right side */
+}
+
+/* Sunflower background */
+.sunflower-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure sunflowers appear behind other content */
+}
+
+.sunflower {
+    position: absolute;
+    width: 80px; /* Increase the size of the sunflower */
+    height: auto;
+    animation: fall 15s linear infinite, spin 8s linear infinite; /* Adjust duration as needed */
+    transform-origin: center; /* Rotate from the center */
+    bottom: -100px; /* Place the sunflower lower */
+    left: 47%; /* Move the sunflower more to the left */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Start spinning from 0 degrees */
+    }
+    100% {
+        transform: rotate(360deg); /* End spinning at 360 degrees */
+    }
+}
+
+
+h1::before,
+h1::after {
+    position: absolute;
+    width: 50px; /* Adjust the size of the sunflower */
+    height: auto;
+    top: 0%; /* Align with the middle of the h1 */
+    transform: translateY(-50%);
+}
+
+h1::before {
+    left: 360px; /* Adjust the distance from the left side */
+}
+
+h1::after {
+    right: 400px; /* Adjust the distance from the right side */
+}
