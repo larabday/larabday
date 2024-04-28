@@ -63,8 +63,10 @@ h1::after {
     animation: fall 15s linear infinite, spin 8s linear infinite; /* Adjust duration as needed */
     transform-origin: center; /* Rotate from the center */
     bottom: -100px; /* Place the sunflower lower */
-    left: 47%; /* Move the sunflower more to the left */
+    left: calc(50% - 50px); /* Center the sunflower horizontally and move it 50px more to the left */
 }
+
+
 
 @keyframes spin {
     0% {
