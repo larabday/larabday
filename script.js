@@ -17,11 +17,15 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Display the countdown
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    
-  // If the countdown is over, display a message
-  if (distance < 0) {
+  var countdownElement = document.getElementById("countdown");
+  if (distance > 0) {
+    countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  } else {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
+    countdownElement.innerHTML = "EXPIRED";
+    // Show cards and hide countdown
+    document.getElementById("cards").style.display = "block";
+    countdownElement.style.display = "none";
   }
 }, 1000);
+
