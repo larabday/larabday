@@ -4,7 +4,6 @@ body {
     background-color: #a2bcf0; /* Light blue background */
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Hide overflow to prevent scrollbars */
     position: relative; /* Set body as the reference for absolutely positioned elements */
 }
 
