@@ -101,7 +101,7 @@ h1::after {
 .card img {
     max-width: 200px;
     height: 200px;
-    filter: blur(20px); 
+    filter: blur(30px); 
     height: auto;
     pointer-events: none; /* Prevent pointer events on the blurred images */
 }
