@@ -29,3 +29,33 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+let currentSlide = 0;
+const slides = document.querySelectorAll('.card');
+
+// Hide all slides except the first one
+function hideAllSlides() {
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+}
+
+// Show the current slide
+function showSlide() {
+    hideAllSlides();
+    slides[currentSlide].style.display = 'block';
+}
+
+// Show next slide
+function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+    showSlide();
+}
+
+// Automatically switch to the next slide every 2 seconds
+setInterval(nextSlide, 2000);
+
+// Show the initial slide
+showSlide();

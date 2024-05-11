@@ -62,7 +62,7 @@ h1::after {
     width: 80px; /* Increase the size of the sunflower */
     height: auto;
     bottom: -100px; /* Place the sunflower lower */
-    left: calc(50% - 50px); /* Center the sunflower horizontally and move it 50px more to the left */
+    left: calc(50% - 40px); /* Center the sunflower horizontally and move it 50px more to the left */
     animation: spin 8s linear infinite; /* Apply the spinning animation */
     transform-origin: center; /* Rotate from the center */
 }
@@ -117,4 +117,3 @@ h1::after {
         flex: 0 0 auto; /* Let cards grow to fit content */
     }
 }
-
